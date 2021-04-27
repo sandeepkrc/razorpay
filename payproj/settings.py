@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import smtplib
 from pathlib import Path
 import os
 
@@ -30,6 +30,13 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'#extra
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = '**************'
+EMAIL_HOST_PASSWORD = '***********'#ogpwkoyxpteymebu
+EMAIL_PORT = 587
+#DEFAULT_FROM_EMAIL = 'default from email'#extra
 
 INSTALLED_APPS = [
     'django.contrib.admin',
